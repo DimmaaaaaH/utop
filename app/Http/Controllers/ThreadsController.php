@@ -48,7 +48,7 @@ class ThreadsController extends Controller
      */
     public function show(Threads $threads)
     {
-        //
+        return view('threads.show', compact('threads')); 
     }
 
     /**
