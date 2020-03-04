@@ -5,13 +5,34 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{$threads->title}}</div>
+                <div class="card-header">{{ $thread->title }}</div>
 
                 <div class="card-body">
-                    {{ $threads->body }}
+                    {{ $thread->body }}
                 </div>
             </div>
+        </div> 
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            @foreach ($thread->reply as $reply)
+            
+            <div class="card">
+                <div class="card-body">
+                    {{ $reply->body }}
+                </div>
+            </div>
+            
+            @endforeach
+
         </div>
     </div>
+
+
+
+
 </div>
 @endsection

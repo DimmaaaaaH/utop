@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Threads;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ThreadsController extends Controller
+class ShController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class ThreadsController extends Controller
      */
     public function index()
     {
-        $threads = Threads::latest()->get();
-
-        return view('threads.index', compact('threads'));
+        //
     }
 
     /**
@@ -43,22 +41,21 @@ class ThreadsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Threads  $threads
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Threads $threads)
+    public function show($id)
     {
-        $threads = Threads::latest()->get();
-        return view('threads.show', compact('threads')); 
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Threads  $threads
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Threads $threads)
+    public function edit($id)
     {
         //
     }
@@ -67,10 +64,10 @@ class ThreadsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Threads  $threads
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Threads $threads)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -78,10 +75,10 @@ class ThreadsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Threads  $threads
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Threads $threads)
+    public function destroy($id)
     {
         //
     }
